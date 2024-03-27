@@ -1,0 +1,92 @@
+.efecto-volteo-container {
+    display: flex; /* Contenedor flexible */
+    align-items: center;
+}
+
+.efecto-volteo {
+    width: 300px;
+    height: 200px;
+    background-image: url(https://i.pinimg.com/564x/3a/06/53/3a0653755d9c298cb655533ffce413f7.jpg);
+    background-size: cover;
+    /* background-color: rgb(31,25,47); */
+    perspective: 1000px;
+    cursor: pointer; /* El cursor se posiciona como elemento interactivo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s; /* Tiempo que demora el volteo */
+    position: relative;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.efecto-volteo::before {
+    content: attr(data-texto1); /* Asigna el texto1 */
+    position: absolute;
+    font: Arial;
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.efecto-volteo:hover {
+    transform: rotateY(180deg); /* El contenedor gira 180° */
+    color: white;
+    visibility: visible;
+    background-image: none;
+    background-color: black; /* Cambia el color */
+}
+
+.efecto-volteo:hover::before {
+    content: attr(data-texto2); /* Cambia el texto1 al texto2 */
+    transform: rotateY(180deg);
+    color: white;
+}
+
+
+
+.efecto-volteo-container2 {
+    display: flex; /* Contenedor flexible */
+    align-items: center;
+}
+
+.efecto-volteo2 {
+    width: 300px;
+    height: 200px;
+    background-image: url(https://i.pinimg.com/564x/70/90/a5/7090a593aff0b547141f9b39c7a63c7e.jpg);
+    background-size: cover;
+    /* background-color: rgb(31,25,47); */
+    perspective: 1000px;
+    cursor: pointer; /* El cursor se posiciona como elemento interactivo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s; /* Tiempo que demora el volteo */
+    position: relative;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.efecto-volteo2::before {
+    content: attr(data-texto1); /* Asigna el texto1 */
+    position: absolute;
+    font: Arial;
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.efecto-volteo2:hover {
+    transform: rotateY(180deg); /* El contenedor gira 180° */
+    color: white;
+    background-image: none;
+    background-color: black; /* Cambia el color */
+}
+
+.efecto-volteo2:hover::before {
+    content: attr(data-texto2); /* Cambia el texto1 al texto2 */
+    transform: rotateY(180deg);
+    color: white;
+}
